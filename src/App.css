@@ -1,0 +1,36 @@
+:root {
+  --app-border-color: #aaa;
+  --app-background-color: #fff;
+  --app-border-radious: 5px;
+  --app-text-color: #333;
+  --app-input-padding: 0.7em;
+  --app-input-margin: 0.5em;
+  --app-input-background-color: #fff;
+}
+
+.App {
+  background-color: var(--app-background-color);
+  border-radius: var(--app-border-radious);
+  box-shadow: 3px 3px 3px #ccc;
+  margin: 0 auto;
+  width: max(100%, 600px);
+  color: #333;
+  padding: 1em;
+}
+
+.input-search,
+.btn-clear {
+  border-radius: var(--app-border-radious);
+  padding: 1em;
+  margin: var(--app-input-margin);
+}
+
+.input-search {
+  border: 1px solid var(--app-border-color);
+  background-color: var(--app-input-background-color);
+}
+
+.btn-clear {
+  background-color: #ccc;
+  border: none;
+}
