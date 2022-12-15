@@ -1,12 +1,14 @@
 import { useEffect, useState, useRef } from 'react';
 import './App.css';
 import User from './interfaces/User';
+import Loader from './components/Loader';
 import ListData from './components/ListData';
 
 function App() {
 
   const [dataList, setDataList] = useState([])
   const [filteredDatalist, setFilteredDataList] = useState([]);
+  const [error, setError] = useState({});
 
   const inputSearch = useRef<HTMLInputElement>(null);
   
@@ -14,7 +16,7 @@ function App() {
   useEffect(() => {
     fetch('./data.json')
       .then(response => response.json())
-      .then(res => console.log(res))
+      .then(res => setDataList(res))
       .catch(error => console.log('error', error));
   }, [])
 
@@ -37,7 +39,10 @@ function App() {
       </header>
 
       <div className="dataLists">
-        <ListData data={filteredDatalist}/>
+        <h3>Data</h3>
+        { (dataList.length > 0 ) ? 
+            dataList.map( (item:User) => (item.name) ) :
+            <Loader /> }
       </div>
       
     </div>
