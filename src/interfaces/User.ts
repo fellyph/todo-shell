@@ -1,7 +1,7 @@
 interface User {
     id: Number,
     email: string,
-    userName: string
+    name: string
 }
 
 export default User;
