@@ -3,6 +3,7 @@ import './App.css';
 import User from './interfaces/User';
 import Loader from './components/Loader';
 import ListData from './components/ListData';
+import ItemListData from './components/ItemListData';
 
 function App() {
 
@@ -41,7 +42,7 @@ function App() {
       <div className="dataLists">
         <h3>Data</h3>
         { (dataList.length > 0 ) ? 
-            dataList.map( (item:User) => (item.name) ) :
+            <ListData data={dataList} /> :
             <Loader /> }
       </div>
       

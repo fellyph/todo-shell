@@ -1,12 +1,12 @@
 import User from '../interfaces/User';
 import ItemListData from './ItemListData';
 
-const ListData = ( data: Array<User> ) => {
-    console.debug(data);
+const ListData = ( prop: {data: Array<User>} ) => {
+    console.debug(prop.data);
     
     return(
     <div className="listData">
-        {data.map(( item:User ) => (<ItemListData user={item} />))} 
+        {prop.data.map(( item:User ) => (<ItemListData key={item.id} user={item} />))} 
     </div>
     );
 };
