@@ -13,6 +13,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  /* app properties */
+  --app-border-color: #aaa;
+  --app-background-color: #fff;
+  --app-border-radious: 5px;
+  --app-text-color: #333;
+  --app-input-padding: 0.7em;
+  --app-input-margin: 0.5em;
+  --app-input-background-color: #fff;
+
+  /* datalist properties */
 }
 
 a {
@@ -26,8 +37,10 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+#root {
+  display: block;
 }

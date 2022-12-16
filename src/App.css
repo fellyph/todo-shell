@@ -1,21 +1,12 @@
-:root {
-  --app-border-color: #aaa;
-  --app-background-color: #fff;
-  --app-border-radious: 5px;
-  --app-text-color: #333;
-  --app-input-padding: 0.7em;
-  --app-input-margin: 0.5em;
-  --app-input-background-color: #fff;
-}
-
 .App {
   background-color: var(--app-background-color);
   border-radius: var(--app-border-radious);
   box-shadow: 3px 3px 3px #ccc;
-  margin: 0 auto;
-  width: max(100%, 600px);
-  color: #333;
+  margin: 2em auto;
+  width: min(100%, 900px);
+  color: var(--app-text-color);
   padding: 1em;
+  display: block;
 }
 
 .input-search,
@@ -33,4 +24,8 @@
 .btn-clear {
   background-color: #ccc;
   border: none;
+}
+
+.content {
+  display: flex;
 }
